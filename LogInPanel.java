@@ -13,6 +13,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import java.util.concurrent.TimeUnit;
 import java.awt.event.ActionEvent;
 
 public class LogInPanel extends JFrame {
@@ -81,10 +82,20 @@ public class LogInPanel extends JFrame {
 				
 				if(usernameVerf.equals("emichulo") && passVerf.equals("parolaesecreta"))
 				{
+		
+					try {
+						JOptionPane.showMessageDialog(null, "You are sucessfully logined ... ");
+						TimeUnit.SECONDS.sleep(2);
+						dispose();
+						AdminOptions adminOptFrm = new AdminOptions();
+						adminOptFrm.setVisible(true);
+						
+					} catch (InterruptedException e1) {
+						
+						e1.printStackTrace();
+					}
 					
-					JOptionPane.showMessageDialog(LogInButton,"You are sucessfully logined ... ");
-					
-					
+									
 				}
 				
 				else if (!usernameVerf.equals("emichulo")){

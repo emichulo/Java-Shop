@@ -17,9 +17,9 @@ import net.proteanit.sql.DbUtils;
 //import java.awt.Font;
 //import javax.swing.ListSelectionModel;
 import javax.swing.JScrollPane;
-import javax.swing.table.DefaultTableModel;
+//import javax.swing.table.DefaultTableModel;
 
-import com.mysql.cj.xdevapi.Table;
+//import com.mysql.cj.xdevapi.Table;
 
 
 
@@ -107,7 +107,7 @@ public class Shop extends JFrame {
 			Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopy", "root", "esddg1312");
 			
 			//statement
-			System.out.println("Connected!");
+		
 			
 			String query="select * from prod";
 			
