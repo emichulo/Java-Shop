@@ -93,13 +93,24 @@ public class Dashboard extends JFrame {
 		btnNewButton.setBackground(new Color(0, 206, 209));
 		btnNewButton.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
 		
-		JButton btnNewButton_1 = new JButton("New button");
+		JButton btnNewButton_1 = new JButton("Shop");
+		
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Shop shop_frame = new Shop();
+				shop_frame.setVisible(true);
+				dispose();
+			}
+		});
+		
+		btnNewButton_1.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
 		btnNewButton_1.setBackground(new Color(0, 206, 209));
 		btnNewButton_1.addMouseListener(new ButtonHandler(btnNewButton_1));
 		btnNewButton_1.setBounds(0, 140, 297, 61);
 		panel.add(btnNewButton_1);
 		
-		JButton btnNewButton_2 = new JButton("New button");
+		JButton btnNewButton_2 = new JButton("Cos");
+		btnNewButton_2.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
 		btnNewButton_2.setBackground(new Color(0, 206, 209));
 		btnNewButton_2.addMouseListener(new ButtonHandler(btnNewButton_2));
 		btnNewButton_2.setBounds(0, 202, 297, 61);

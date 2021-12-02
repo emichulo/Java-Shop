@@ -44,7 +44,7 @@ public class LogInPanel extends JFrame {
 	 */
 	public LogInPanel() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 790, 487);
+		setBounds(100, 100, 650, 487);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -101,7 +101,7 @@ public class LogInPanel extends JFrame {
 			}
 		});
 		LogInButton.setFont(new Font("Tahoma", Font.BOLD, 20));
-		LogInButton.setBounds(296, 294, 150, 40);
+		LogInButton.setBounds(287, 292, 150, 40);
 		contentPane.add(LogInButton);
 		
 		JButton BackButton = new JButton("<- Back");
