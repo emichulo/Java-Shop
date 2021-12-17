@@ -45,8 +45,9 @@ public class LogInPanel extends JFrame {
 	 */
 	public LogInPanel() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 650, 487);
+		setBounds(100, 100, 741, 487);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.CYAN);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -54,22 +55,22 @@ public class LogInPanel extends JFrame {
 		JLabel Username = new JLabel("Username");
 		Username.setHorizontalAlignment(SwingConstants.CENTER);
 		Username.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
-		Username.setBounds(70, 125, 193, 40);
+		Username.setBounds(70, 143, 193, 40);
 		contentPane.add(Username);
 		
 		JLabel Password = new JLabel("Password");
 		Password.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
 		Password.setHorizontalAlignment(SwingConstants.CENTER);
-		Password.setBounds(70, 210, 193, 40);
+		Password.setBounds(70, 194, 193, 40);
 		contentPane.add(Password);
 		
 		userIN = new JTextField();
-		userIN.setBounds(273, 129, 193, 40);
+		userIN.setBounds(273, 147, 193, 40);
 		contentPane.add(userIN);
 		userIN.setColumns(10);
 		
 		passIN = new JPasswordField();
-		passIN.setBounds(276, 214, 190, 40);
+		passIN.setBounds(273, 198, 190, 40);
 		contentPane.add(passIN);
 		
 		JButton LogInButton = new JButton("Log In");
@@ -80,7 +81,7 @@ public class LogInPanel extends JFrame {
 				@SuppressWarnings("deprecation")
 				String passVerf = passIN.getText();
 				
-				if(usernameVerf.equals("emichulo") && passVerf.equals("parolaesecreta"))
+				if(usernameVerf.equals("emi") && passVerf.equals("parola"))
 				{
 		
 					try {
@@ -98,7 +99,7 @@ public class LogInPanel extends JFrame {
 									
 				}
 				
-				else if (!usernameVerf.equals("emichulo")){
+				else if (!usernameVerf.equals("emi")){
 					
 					JOptionPane.showMessageDialog(LogInButton,"Acest username nu exista !");
 					
@@ -112,7 +113,7 @@ public class LogInPanel extends JFrame {
 			}
 		});
 		LogInButton.setFont(new Font("Tahoma", Font.BOLD, 20));
-		LogInButton.setBounds(287, 292, 150, 40);
+		LogInButton.setBounds(296, 269, 150, 40);
 		contentPane.add(LogInButton);
 		
 		JButton BackButton = new JButton("<- Back");
@@ -129,5 +130,12 @@ public class LogInPanel extends JFrame {
 		BackButton.setFont(new Font("Tahoma", Font.BOLD, 17));
 		BackButton.setBounds(10, 403, 150, 40);
 		contentPane.add(BackButton);
+		
+		JLabel lblNewLabel_4_1 = new JLabel("LOG IN");
+		lblNewLabel_4_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_4_1.setForeground(Color.RED);
+		lblNewLabel_4_1.setFont(new Font("Copperplate Gothic Bold", Font.BOLD | Font.ITALIC, 18));
+		lblNewLabel_4_1.setBounds(273, 11, 193, 64);
+		contentPane.add(lblNewLabel_4_1);
 	}
 }

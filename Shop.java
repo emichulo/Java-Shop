@@ -17,6 +17,14 @@ import net.proteanit.sql.DbUtils;
 //import java.awt.Font;
 //import javax.swing.ListSelectionModel;
 import javax.swing.JScrollPane;
+import java.awt.Color;
+import javax.swing.JButton;
+import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.ListSelectionModel;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 //import javax.swing.table.DefaultTableModel;
 
 //import com.mysql.cj.xdevapi.Table;
@@ -85,18 +93,46 @@ public class Shop extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 790, 487);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.CYAN);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(293, 102, 385, 287);
+		scrollPane.setBounds(68, 285, 639, 152);
 		contentPane.add(scrollPane);
 		
 		table = new JTable();
+		table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		table.setForeground(Color.BLACK);
+		table.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		table.setBackground(Color.ORANGE);
 		table.setCellSelectionEnabled(true);
 
 		scrollPane.setViewportView(table);
+		
+		JButton btnBack = new JButton("Main menu");
+		btnBack.setForeground(Color.BLACK);
+		
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Dashboard frame = new Dashboard();
+				frame.setVisible(true);
+				dispose();
+				
+			}
+		});
+		btnBack.setFont(new Font("Comic Sans MS", Font.BOLD, 15));
+		btnBack.setBackground(Color.RED);
+		btnBack.setBounds(625, 177, 139, 42);
+		contentPane.add(btnBack);
+		
+		JLabel lblNewLabel_4 = new JLabel("PRODUCTS LIST");
+		lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_4.setFont(new Font("Copperplate Gothic Bold", Font.BOLD | Font.ITALIC, 15));
+		lblNewLabel_4.setBounds(309, 236, 150, 36);
+		contentPane.add(lblNewLabel_4);
 		shopTable();
 	}
 	

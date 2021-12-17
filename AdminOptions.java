@@ -197,6 +197,7 @@ public class AdminOptions extends JFrame {
 		
 		JButton btnDel = new JButton("DeleteProd");
 		btnDel.addMouseListener(new MouseAdapter() {
+			
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
@@ -268,17 +269,18 @@ public class AdminOptions extends JFrame {
 	public void afisProd() {
 		
 		try {
-			//Conection
+			
+			// Conection
+			
 			Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopy", "root", "esddg1312");
 			
-			//statement
-			
-			
-			String query="select * from prod";
+			// Statement
+						
+			String query= "select * from prod";
 			
 			PreparedStatement sta = myConn.prepareStatement(query);
 						
-			//result
+			// Result
 			
 			ResultSet myRes =  sta.executeQuery();
 			
