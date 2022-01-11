@@ -196,6 +196,7 @@ public class AdminOptions extends JFrame {
 		contentPane.add(btnAdd);
 		
 		JButton btnDel = new JButton("DeleteProd");
+	
 		btnDel.addMouseListener(new MouseAdapter() {
 			
 			@Override

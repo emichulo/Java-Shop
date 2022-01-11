@@ -105,6 +105,13 @@ public class Dashboard extends JFrame {
 		panel.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("Cos");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Cos cos_frame = new Cos();
+				cos_frame.setVisible(true);
+				dispose();
+			}
+		});
 		btnNewButton_2.setForeground(Color.BLACK);
 		btnNewButton_2.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
 		btnNewButton_2.setBackground(new Color(0, 206, 209));
